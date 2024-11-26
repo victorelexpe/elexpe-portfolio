@@ -5,6 +5,7 @@ import { WorkExperience } from "../components/WorkExperience";
 import { News } from "../components/News";
 import { Awards } from "../components/Awards";
 import { TechStack } from "../components/TechStack";
+import { Hobbies } from "../components/Hobbies";
 import { Contact } from "../components/Contact";
 import { fadeIn } from "../lib/animations";
 import { ThemeToggle } from "../components/ThemeToggle";
@@ -28,6 +29,7 @@ export default function Home() {
         <News />
         <Awards />
         <TechStack />
+        <Hobbies />
         <Contact />
       </main>
     </motion.div>
