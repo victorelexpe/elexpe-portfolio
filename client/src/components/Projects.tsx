@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "./ui/card";
 import { fadeIn, staggerContainer } from "../lib/animations";
 import { PROJECTS } from "../lib/constants";
 import { Github, ExternalLink } from "lucide-react";
@@ -9,66 +8,53 @@ export function Projects() {
     <motion.section
       id="projects"
       variants={staggerContainer}
-      className="py-20"
+      className="section"
     >
       <motion.h2
         variants={fadeIn}
-        className="text-4xl md:text-5xl font-bold mb-12 text-gradient"
+        className="section-title"
       >
         Projects
       </motion.h2>
       <motion.div
         variants={staggerContainer}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        className="space-y-4"
       >
         {PROJECTS.map((project, index) => (
           <motion.div
             key={index}
             variants={fadeIn}
-            whileHover={{ y: -8, scale: 1.02 }}
-            className="h-full"
+            className="list-item"
           >
-            <Card className="glass-card gradient-bg h-full border border-white/20 transition-all duration-300 hover:border-primary/50">
-              <CardHeader>
-                <CardTitle className="text-2xl font-bold">{project.title}</CardTitle>
-                <CardDescription className="text-lg">{project.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2 mb-6">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+              <div className="space-y-4">
+                <h3 className="text-2xl font-light">{project.title}</h3>
+                <p className="text-white/70 max-w-2xl">{project.description}</p>
+                <div className="flex flex-wrap gap-4 font-mono text-sm text-white/50">
                   {project.tech.map((tech) => (
-                    <motion.span
-                      key={tech}
-                      whileHover={{ scale: 1.05 }}
-                      className="px-3 py-1.5 text-sm glass-card rounded-full border border-white/10"
-                    >
-                      {tech}
-                    </motion.span>
+                    <span key={tech}>{tech}</span>
                   ))}
                 </div>
-                <div className="flex gap-4">
-                  <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 glass-card rounded-full hover:text-primary transition-colors duration-300"
-                  >
-                    <Github className="h-5 w-5" />
-                  </motion.a>
-                  <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 glass-card rounded-full hover:text-primary transition-colors duration-300"
-                  >
-                    <ExternalLink className="h-5 w-5" />
-                  </motion.a>
-                </div>
-              </CardContent>
-            </Card>
+              </div>
+              <div className="flex gap-6">
+                <motion.a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/50 hover:text-white transition-colors duration-300"
+                >
+                  <Github className="h-6 w-6" />
+                </motion.a>
+                <motion.a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/50 hover:text-white transition-colors duration-300"
+                >
+                  <ExternalLink className="h-6 w-6" />
+                </motion.a>
+              </div>
+            </div>
           </motion.div>
         ))}
       </motion.div>
