@@ -26,8 +26,6 @@ export function Contact() {
         </p>
         <div className="flex justify-center gap-8">
           {[
-            { icon: <Mail className="h-8 w-8" />, href: `mailto:contact@elexpe.dev` },
-            { icon: <Github className="h-8 w-8" />, href: SOCIAL_LINKS.GITHUB },
             { icon: <Linkedin className="h-8 w-8" />, href: SOCIAL_LINKS.LINKEDIN },
             { icon: <Twitter className="h-8 w-8" />, href: SOCIAL_LINKS.TWITTER }
           ].map((item, index) => (

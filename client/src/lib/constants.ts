@@ -9,14 +9,13 @@ export const PROJECTS = [
     title: "data101.dev",
     description: "A comprehensive data engineering learning platform featuring interactive tutorials and hands-on exercises for modern data technologies.",
     tech: ["Python", "Flask", "BigQuery", "MongoDB", "APIs"],
-    link: "https://data101.dev",
-    github: "https://github.com/ElexpreWasTaken/data101"
+    link: "https://data101.dev"
   },
   {
-    title: "BQ Schema Sync",
+    title: "bq-schema-sync",
     description: "An open-source tool for automating BigQuery schema synchronization across environments, streamlining data warehouse management.",
     tech: ["Python", "BigQuery", "Cloud Functions", "CI/CD", "APIs"],
-    link: "https://github.com/ElexpreWasTaken/bq-schema-sync",
+    link: "https://pypi.org/project/bq-schema-sync/",
     github: "https://github.com/ElexpreWasTaken/bq-schema-sync"
   }
 ];
