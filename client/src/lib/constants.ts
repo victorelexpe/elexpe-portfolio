@@ -1,7 +1,7 @@
 export const SOCIAL_LINKS = {
   GITHUB: "https://github.com/ElexpreWasTaken",
   LINKEDIN: "https://linkedin.com/in/victor-hasim-elexpe-ahamri",
-  TWITTER: "https://twitter.com/ElexpreWasTaken",
+  TWITTER: "https://x.com/victorelexpe",
 };
 
 export const PROJECTS = [

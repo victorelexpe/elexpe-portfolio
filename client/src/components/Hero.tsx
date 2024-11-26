@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../lib/animations";
 import { Button } from "./ui/button";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { SOCIAL_LINKS } from "../lib/constants";
 
 export function Hero() {
@@ -33,12 +33,11 @@ export function Hero() {
           >
             <Button
               size="lg"
-              className="bg-white text-black hover:bg-white/90 text-lg px-8 flex items-center gap-2"
+              className="bg-white text-black hover:bg-white/90 text-lg px-8"
               asChild
             >
               <a href={SOCIAL_LINKS.TWITTER} target="_blank" rel="noopener noreferrer">
-                <Twitter className="h-5 w-5" />
-                <span>Follow me on X</span>
+                Connect on X
               </a>
             </Button>
           </motion.div>
