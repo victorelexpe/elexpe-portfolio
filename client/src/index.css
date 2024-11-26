@@ -17,6 +17,37 @@
 }
 
 @layer components {
+  .hero-background {
+    @apply relative;
+  }
+
+  .hero-background::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-radial from-black to-gray-900/30 -z-10;
+  }
+
+  .hero-background::after {
+    content: '';
+    @apply absolute inset-0 opacity-10 -z-10;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+    animation: dot-float 8s ease-in-out infinite;
+  }
+
+  @keyframes dot-float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .bg-dot-pattern {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+    animation: dot-float 8s ease-in-out infinite;
+  }
   .section {
     @apply py-8;
   }
