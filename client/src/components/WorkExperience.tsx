@@ -5,21 +5,21 @@ import { Building2, Calendar } from "lucide-react";
 const WORK_EXPERIENCE = [
   {
     company: "Havas Media Group",
-    role: "Software Developer",
-    period: "2020 - Present",
-    description: "Leading development of innovative digital solutions and campaigns."
+    role: "Lead Data Engineer",
+    period: "May 2022 - Today",
+    description: "Lead Data Engineer building cloud infrastructure, monitoring systems, and data pipelines with 45% cost reduction."
   },
   {
-    company: "Telefonica",
-    role: "Technical Lead",
-    period: "2018 - 2020",
-    description: "Managed technical projects and led development teams."
+    company: "Telefónica",
+    role: "Data Engineer",
+    period: "Jun 2021 - May 2022",
+    description: "Data Engineer implementing ETL processes and distributed computing solutions using PySpark and Hadoop."
   },
   {
     company: "Technical University of Madrid",
-    role: "Research Assistant",
-    period: "2016 - 2018",
-    description: "Conducted research in computer science and assisted in teaching."
+    role: "Full-Stack Developer",
+    period: "Oct 2020 - Dec 2020",
+    description: "Full-Stack Developer creating blockchain solutions with HyperLedger Fabric."
   }
 ];
 
