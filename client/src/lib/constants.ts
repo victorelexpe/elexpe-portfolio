@@ -1,31 +1,44 @@
 export const SOCIAL_LINKS = {
-  GITHUB: "https://github.com/elexpe",
-  LINKEDIN: "https://linkedin.com/in/elexpe",
-  TWITTER: "https://twitter.com/elexpe",
+  GITHUB: "https://github.com/ElexpreWasTaken",
+  LINKEDIN: "https://linkedin.com/in/victor-hasim-elexpe-ahamri",
+  TWITTER: "https://twitter.com/ElexpreWasTaken",
 };
 
 export const PROJECTS = [
   {
-    title: "Project 1",
-    description: "Description of project 1",
-    tech: ["React", "TypeScript", "Tailwind"],
-    link: "https://project1.com",
-    github: "https://github.com/elexpe/project1"
+    title: "Replit Clone",
+    description: "A code editor built with React and Monaco Editor, featuring real-time collaboration and execution capabilities.",
+    tech: ["React", "TypeScript", "Monaco Editor", "Socket.io", "Node.js"],
+    link: "https://replit-clone.elexpe.dev",
+    github: "https://github.com/ElexpreWasTaken/replit-clone"
   },
-  // Add more projects matching elexpe.dev
+  {
+    title: "AI Code Reviewer",
+    description: "An AI-powered code review tool that provides suggestions and improvements for your code.",
+    tech: ["Next.js", "OpenAI API", "TypeScript", "Tailwind CSS"],
+    link: "https://code-reviewer.elexpe.dev",
+    github: "https://github.com/ElexpreWasTaken/ai-code-reviewer"
+  },
+  {
+    title: "Personal Website",
+    description: "My personal website built with React and Tailwind CSS, featuring smooth animations and dark mode.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    link: "https://elexpe.dev",
+    github: "https://github.com/ElexpreWasTaken/portfolio"
+  }
 ];
 
 export const TECH_STACK = [
   {
     category: "Frontend",
-    techs: ["React", "TypeScript", "Tailwind CSS", "Next.js"]
+    techs: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
   },
   {
     category: "Backend",
-    techs: ["Node.js", "Express", "PostgreSQL"]
+    techs: ["Node.js", "Express", "tRPC", "PostgreSQL", "MongoDB"]
   },
   {
-    category: "Tools",
-    techs: ["Git", "VS Code", "Docker"]
+    category: "Tools & Others",
+    techs: ["Git", "Docker", "AWS", "Vercel", "OpenAI API"]
   }
 ];
