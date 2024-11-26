@@ -6,14 +6,13 @@ const AWARDS = [
     title: "actúaUPM Entrepreneurship Program",
     status: "Finalist",
     year: "2023",
-    description: "A prestigious entrepreneurship competition at Technical University of Madrid. Recognized for developing an innovative platform to connect museums and visitors."
+    description: "Developed an innovative platform focused on enhancing museum visitor experiences by creating meaningful connections between cultural institutions and their audiences."
   },
   {
     title: "Global TadHack",
-    status: "Winner",
+    status: "Winner (Madrid)",
     year: "2017",
-    description: "World's largest hackathon dedicated to programmable telecommunications, bringing together developers from around the globe to create innovative communication solutions.",
-    achievement: "Developed a real-time communication platform integrating voice, messaging, and location services"
+    description: "Developed an iOS application leveraging Natural Language Processing (NLP) and WebRTC technology to streamline doctor-patient communication. The app compiles patient symptoms and enables secure video consultations between healthcare providers and patients."
   }
 ];
 
