@@ -34,7 +34,7 @@ export function Awards() {
           <motion.div
             key={index}
             variants={fadeIn}
-            className="list-item"
+            className="flat-item"
           >
             <div className="space-y-2">
               <h3 className="text-2xl font-light">{award.title}</h3>

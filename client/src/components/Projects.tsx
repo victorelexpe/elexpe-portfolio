@@ -24,7 +24,7 @@ export function Projects() {
           <motion.div
             key={index}
             variants={fadeIn}
-            className="list-item"
+            className="flat-item"
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
               <div className="space-y-4">

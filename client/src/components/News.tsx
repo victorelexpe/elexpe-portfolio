@@ -40,7 +40,7 @@ export function News() {
           <motion.div
             key={index}
             variants={fadeIn}
-            className="list-item"
+            className="flat-item"
           >
             <div className="space-y-2">
               <h3 className="text-2xl font-light">{news.title}</h3>
