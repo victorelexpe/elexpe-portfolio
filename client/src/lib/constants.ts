@@ -26,34 +26,60 @@ export const TECH_STACK = [
     techs: [
       "Google Cloud Platform",
       "Cloud Functions",
-      "Cloud Run",
-      "Storage",
-      "Monitoring",
-      "Workflows"
+      "Workflows",
+      "Asset Inventory",
+      "Vertex AI",
+      "Workload Identity Federation",
+      "Digital Ocean",
+      "Docker",
+      "VMs"
     ]
   },
   {
-    category: "Data & Analytics",
+    category: "Data Engineering & Analytics",
     techs: [
       "BigQuery",
       "Dataform",
-      "StreamSets",
+      "PySpark",
       "Hadoop",
+      "HDFS",
+      "Hive",
+      "Dataproc",
+      "StreamSets",
+      "Tableau",
       "MongoDB",
+      "PostgreSQL",
+      "MySQL"
+    ]
+  },
+  {
+    category: "Development & Languages",
+    techs: [
+      "Python",
+      "JavaScript",
+      "NodeJs",
+      "C/C++",
+      "Java",
+      "Ada",
+      "VHDL",
       "SQL"
     ]
   },
   {
-    category: "Languages & Tools",
+    category: "Tools & Frameworks",
     techs: [
-      "Python",
-      "Flask",
-      "Javascript",
-      "NodeJS",
       "Git",
-      "CI/CD",
-      "Docker",
-      "APIs"
+      "Bash",
+      "Linux",
+      "ExpressJs",
+      "Jupyter",
+      "Zeppelin",
+      "Enterprise Architect",
+      "UML",
+      "FiwareIDM",
+      "HyperLedger Fabric",
+      "DO-178C",
+      "Agile methodologies"
     ]
   }
 ];
