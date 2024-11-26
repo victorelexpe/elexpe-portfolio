@@ -8,41 +8,41 @@ export function Hero() {
   return (
     <motion.section
       variants={staggerContainer}
-      className="min-h-[calc(100vh-4rem)] -mx-4 px-4 flex flex-col md:flex-row items-center justify-center gap-12 bg-gradient-to-br from-purple-500/10 via-transparent to-blue-500/10"
+      className="min-h-[calc(100vh-4rem)] -mx-4 px-4 flex flex-col items-center justify-center"
     >
-      <div className="flex-1 space-y-8">
+      <div className="flex-1 space-y-12 max-w-4xl mx-auto">
         <motion.h1
           variants={fadeIn}
-          className="text-5xl md:text-7xl font-bold mb-6"
+          className="text-hero text-center"
         >
-          Hi, I'm <span className="text-gradient">Elexpe</span> 👋
+          Hi, I'm Victor (Elexpe)
         </motion.h1>
         <motion.p
           variants={fadeIn}
-          className="text-xl md:text-3xl text-muted-foreground mb-8 max-w-2xl"
+          className="text-subtitle text-center"
         >
-          A software developer passionate about creating modern web experiences, who enjoys sim racing and producing music with synthesizers in my free time
+          Computer Engineer specializing in Data Engineering
         </motion.p>
         <motion.div
           variants={fadeIn}
-          className="flex gap-4"
+          className="flex justify-center gap-8"
         >
           {Object.entries(SOCIAL_LINKS).map(([platform, link]) => (
             <motion.div
               key={platform}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
             >
               <Button
                 variant="outline"
                 size="icon"
-                className="glass-card hover:border-primary/50 transition-colors duration-300"
+                className="w-12 h-12 border-white/20 hover:border-white transition-colors duration-300"
                 asChild
               >
                 <a href={link} target="_blank" rel="noopener noreferrer">
-                  {platform === 'GITHUB' && <Github className="h-5 w-5" />}
-                  {platform === 'LINKEDIN' && <Linkedin className="h-5 w-5" />}
-                  {platform === 'TWITTER' && <Twitter className="h-5 w-5" />}
+                  {platform === 'GITHUB' && <Github className="h-6 w-6" />}
+                  {platform === 'LINKEDIN' && <Linkedin className="h-6 w-6" />}
+                  {platform === 'TWITTER' && <Twitter className="h-6 w-6" />}
                 </a>
               </Button>
             </motion.div>

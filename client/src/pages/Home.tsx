@@ -5,10 +5,8 @@ import { WorkExperience } from "../components/WorkExperience";
 import { News } from "../components/News";
 import { Awards } from "../components/Awards";
 import { TechStack } from "../components/TechStack";
-
 import { Contact } from "../components/Contact";
 import { fadeIn } from "../lib/animations";
-import { ThemeToggle } from "../components/ThemeToggle";
 
 export default function Home() {
   return (
@@ -17,12 +15,9 @@ export default function Home() {
       animate="animate"
       exit="exit"
       variants={fadeIn}
-      className="min-h-screen bg-background relative"
+      className="min-h-screen bg-black"
     >
-      <div className="fixed top-4 right-4 z-50">
-        <ThemeToggle />
-      </div>
-      <main className="container mx-auto px-4 py-8 space-y-20">
+      <main className="container mx-auto px-4 py-8 space-y-32">
         <Hero />
         <Projects />
         <WorkExperience />
