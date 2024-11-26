@@ -7,7 +7,7 @@ const WORK_EXPERIENCE = [
     company: "Havas Media Group",
     role: "Lead Data Engineer",
     period: "May 2022 - Today",
-    description: "Lead Data Engineer building cloud infrastructure, monitoring systems, and data pipelines with 45% cost reduction."
+    description: "Building cloud infrastructure, monitoring systems, and data pipelines."
   },
   {
     company: "Telefónica",
