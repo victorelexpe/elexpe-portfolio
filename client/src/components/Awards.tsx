@@ -5,12 +5,16 @@ const AWARDS = [
   {
     title: "actúaUPM Entrepreneurship Program",
     status: "Finalist",
-    year: "2023"
+    year: "2023",
+    description: "A prestigious entrepreneurship competition at Technical University of Madrid focusing on innovative technology solutions. Recognized for developing a data engineering platform that simplifies learning modern data technologies.",
+    achievement: "Selected among top 10 projects from over 400 submissions"
   },
   {
     title: "Global TadHack",
     status: "Winner",
-    year: "2017"
+    year: "2017",
+    description: "World's largest hackathon dedicated to programmable telecommunications, bringing together developers from around the globe to create innovative communication solutions.",
+    achievement: "Developed a real-time communication platform integrating voice, messaging, and location services"
   }
 ];
 
@@ -36,11 +40,13 @@ export function Awards() {
             variants={fadeIn}
             className="flat-item"
           >
-            <div className="space-y-2">
+            <div className="space-y-3">
               <h3 className="text-2xl font-light">{award.title}</h3>
               <p className="text-white/70">
                 <span className="text-white">{award.status}</span> • {award.year}
               </p>
+              <p className="text-white/70 leading-relaxed">{award.description}</p>
+              <p className="text-white/90 font-light">{award.achievement}</p>
             </div>
           </motion.div>
         ))}
