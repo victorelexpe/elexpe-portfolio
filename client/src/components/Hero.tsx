@@ -8,9 +8,9 @@ export function Hero() {
   return (
     <motion.section
       variants={staggerContainer}
-      className="min-h-[calc(100vh-4rem)] -mx-4 px-4 flex flex-col items-center justify-center"
+      className="min-h-[calc(100vh-4rem)] -mx-4 px-4 flex items-center justify-center"
     >
-      <div className="flex-1 space-y-12 max-w-4xl mx-auto">
+      <div className="space-y-8 max-w-4xl mx-auto">
         <motion.h1
           variants={fadeIn}
           className="text-hero text-center"
