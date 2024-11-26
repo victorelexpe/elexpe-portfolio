@@ -18,28 +18,45 @@
 
 @layer components {
   .hero-background {
-    @apply relative;
+    @apply relative overflow-hidden;
   }
 
   .hero-background::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-radial from-black to-gray-900/30 -z-10;
+    @apply absolute inset-0 -z-10;
+    background: 
+      radial-gradient(circle at center, rgba(74, 74, 74, 0.03) 0%, transparent 70%),
+      radial-gradient(circle at 30% 20%, rgba(140, 140, 140, 0.05) 0%, transparent 50%),
+      linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(17, 17, 17) 100%);
+    animation: gradient-shift 15s ease infinite;
   }
 
   .hero-background::after {
     content: '';
-    @apply absolute inset-0 opacity-10 -z-10;
-    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-    background-size: 24px 24px;
-    animation: dot-float 8s ease-in-out infinite;
+    @apply absolute inset-0 opacity-15 -z-10;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.15) 1.2px, transparent 1.2px);
+    background-size: 28px 28px;
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.3));
+    animation: dot-float 10s ease-in-out infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
   }
 
   @keyframes dot-float {
     0%, 100% {
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
     50% {
-      transform: translateY(-5px);
+      transform: translateY(-8px) scale(1.02);
     }
   }
 
