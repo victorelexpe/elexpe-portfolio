@@ -6,8 +6,7 @@ const AWARDS = [
     title: "actúaUPM Entrepreneurship Program",
     status: "Finalist",
     year: "2023",
-    description: "A prestigious entrepreneurship competition at Technical University of Madrid focusing on innovative technology solutions. Recognized for developing a data engineering platform that simplifies learning modern data technologies.",
-    achievement: "Selected among top 10 projects from over 400 submissions"
+    description: "A prestigious entrepreneurship competition at Technical University of Madrid. Recognized for developing an innovative platform to connect museums and visitors."
   },
   {
     title: "Global TadHack",
