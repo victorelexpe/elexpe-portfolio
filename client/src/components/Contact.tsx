@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../lib/animations";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { ExternalLink, Github, Linkedin } from "lucide-react";
 import { SOCIAL_LINKS } from "../lib/constants";
 
 export function Contact() {
@@ -27,7 +27,8 @@ export function Contact() {
         <div className="flex justify-center gap-8">
           {[
             { icon: <Linkedin className="h-8 w-8" />, href: SOCIAL_LINKS.LINKEDIN },
-            { icon: <Twitter className="h-8 w-8" />, href: SOCIAL_LINKS.TWITTER }
+            { icon: <ExternalLink className="h-8 w-8" />, href: SOCIAL_LINKS.TWITTER },
+            { icon: <Github className="h-8 w-8" />, href: SOCIAL_LINKS.GITHUB }
           ].map((item, index) => (
             <motion.a
               key={index}

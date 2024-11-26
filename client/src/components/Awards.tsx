@@ -44,7 +44,7 @@ export function Awards() {
                 <span className="text-white">{award.status}</span> • {award.year}
               </p>
               <p className="text-white/70 leading-relaxed">{award.description}</p>
-              <p className="text-white/90 font-light">{award.achievement}</p>
+              
             </div>
           </motion.div>
         ))}
