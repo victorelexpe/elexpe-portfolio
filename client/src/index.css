@@ -55,6 +55,6 @@
   }
 
   .list-item {
-    @apply py-6 border-t border-white/10 first:pt-0 first:border-t-0;
+    @apply py-8 border-t border-white/10 first:pt-0 first:border-t-0;
   }
 }

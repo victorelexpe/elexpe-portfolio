@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../lib/animations";
-import { Newspaper } from "lucide-react";
 
 const NEWS_ITEMS = [
   {
