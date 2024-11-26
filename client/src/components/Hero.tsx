@@ -25,28 +25,20 @@ export function Hero() {
         </motion.p>
         <motion.div
           variants={fadeIn}
-          className="flex justify-center gap-8"
+          className="flex justify-center"
         >
-          {Object.entries(SOCIAL_LINKS).map(([platform, link]) => (
-            <motion.div
-              key={platform}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <Button
+              size="lg"
+              className="bg-white text-black hover:bg-white/90 text-lg px-8"
+              asChild
             >
-              <Button
-                variant="outline"
-                size="icon"
-                className="w-12 h-12 border-white/20 hover:border-white transition-colors duration-300"
-                asChild
-              >
-                <a href={link} target="_blank" rel="noopener noreferrer">
-                  {platform === 'GITHUB' && <Github className="h-6 w-6" />}
-                  {platform === 'LINKEDIN' && <Linkedin className="h-6 w-6" />}
-                  {platform === 'TWITTER' && <Twitter className="h-6 w-6" />}
-                </a>
-              </Button>
-            </motion.div>
-          ))}
+              <a href="#projects">View My Work</a>
+            </Button>
+          </motion.div>
         </motion.div>
       </div>
     </motion.section>
