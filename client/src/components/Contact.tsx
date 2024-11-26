@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../lib/animations";
 import { SOCIAL_LINKS } from "../lib/constants";
 import { XLogo } from "./icons/XLogo";
-import { Linkedin } from "lucide-react";
 
 export function Contact() {
   return (
@@ -27,7 +26,7 @@ export function Contact() {
         </p>
         <div className="flex justify-center gap-8">
           {[
-            { text: "LinkedIn", icon: <Linkedin className="h-5 w-5" />, href: SOCIAL_LINKS.LINKEDIN },
+            { text: "LinkedIn", href: SOCIAL_LINKS.LINKEDIN },
             { text: "X", icon: <XLogo />, href: SOCIAL_LINKS.TWITTER }
           ].map((item, index) => (
             <motion.a

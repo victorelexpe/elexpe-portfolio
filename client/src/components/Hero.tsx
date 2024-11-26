@@ -37,8 +37,8 @@ export function Hero() {
               asChild
             >
               <a href={SOCIAL_LINKS.TWITTER} target="_blank" rel="noopener noreferrer">
-                <XLogo />
                 <span>Connect on X</span>
+                <XLogo />
               </a>
             </Button>
           </motion.div>
