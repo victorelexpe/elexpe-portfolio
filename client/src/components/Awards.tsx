@@ -37,16 +37,11 @@ export function Awards() {
             variants={fadeIn}
             className="list-item"
           >
-            <div className="list-item-content">
-              <div className="list-item-icon">
-                <Trophy className="h-6 w-6" />
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-2xl font-light">{award.title}</h3>
-                <p className="text-white/70">
-                  <span className="text-white">{award.status}</span> • {award.year}
-                </p>
-              </div>
+            <div className="space-y-2">
+              <h3 className="text-2xl font-light">{award.title}</h3>
+              <p className="text-white/70">
+                <span className="text-white">{award.status}</span> • {award.year}
+              </p>
             </div>
           </motion.div>
         ))}
