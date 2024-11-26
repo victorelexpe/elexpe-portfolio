@@ -21,7 +21,7 @@ export function Hero() {
           variants={fadeIn}
           className="text-xl md:text-3xl text-muted-foreground mb-8 max-w-2xl"
         >
-          A software developer passionate about creating modern web experiences
+          A software developer passionate about creating modern web experiences, who enjoys sim racing and producing music with synthesizers in my free time
         </motion.p>
         <motion.div
           variants={fadeIn}
