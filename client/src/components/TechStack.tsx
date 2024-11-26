@@ -1,12 +1,6 @@
 import { motion } from "framer-motion";
-import { Card, CardContent } from "./ui/card";
 import { fadeIn, staggerContainer } from "../lib/animations";
 import { TECH_STACK } from "../lib/constants";
-import {
-  Cloud, Database, Code, Binary,
-  Monitor, GitBranch, Store,
-  Server, Dock, Globe, GitMerge
-} from "lucide-react";
 
 export function TechStack() {
   return (
@@ -17,51 +11,37 @@ export function TechStack() {
     >
       <motion.h2
         variants={fadeIn}
-        className="text-4xl md:text-5xl font-bold mb-12 text-gradient"
+        className="text-4xl md:text-5xl font-bold mb-16 text-gradient"
       >
         Tech Stack
       </motion.h2>
       <motion.div
         variants={staggerContainer}
-        className="space-y-12"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-12 gap-y-8"
       >
-        {TECH_STACK.map((category) => (
+        {TECH_STACK.flatMap(category => category.techs).map((tech, index) => (
           <motion.div
-            key={category.category}
+            key={tech}
             variants={fadeIn}
-            className="space-y-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-gradient">{category.category}</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {category.techs.map((tech) => (
-                <motion.div
-                  key={tech}
-                  variants={fadeIn}
-                  whileHover={{ y: -4, scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="h-full"
-                >
-                  <Card className="glass-card gradient-bg h-full border border-white/20 transition-all duration-300 hover:border-primary/50 relative overflow-hidden group">
-                    <div className="absolute inset-0 bg-[linear-gradient(40deg,var(--card-dots)_1.25px,transparent_1.25px)] bg-[length:16px_16px] opacity-10 group-hover:opacity-20 transition-opacity duration-300"></div>
-                    <CardContent className="p-8 flex flex-col items-center justify-center gap-4">
-                      {tech === "Google Cloud Platform" && <Cloud className="w-8 h-8 text-primary/80 group-hover:text-primary transition-colors duration-300" />}
-                      {tech === "BigQuery" && <Database className="w-8 h-8 text-primary/80 group-hover:text-primary transition-colors duration-300" />}
-                      {tech === "Python" && <Code className="w-8 h-8 text-primary/80 group-hover:text-primary transition-colors duration-300" />}
-                      {tech === "Cloud Functions" && <Binary className="w-8 h-8 text-primary/80 group-hover:text-primary transition-colors duration-300" />}
-                      {tech === "Cloud Run" && <Server className="w-8 h-8 text-primary/80 group-hover:text-primary transition-colors duration-300" />}
-                      {tech === "Storage" && <Store className="w-8 h-8 text-primary/80 group-hover:text-primary transition-colors duration-300" />}
-                      {tech === "Monitoring" && <Monitor className="w-8 h-8 text-primary/80 group-hover:text-primary transition-colors duration-300" />}
-                      {tech === "Workflows" && <GitMerge className="w-8 h-8 text-primary/80 group-hover:text-primary transition-colors duration-300" />}
-                      {tech === "Git" && <GitBranch className="w-8 h-8 text-primary/80 group-hover:text-primary transition-colors duration-300" />}
-                      {tech === "Docker" && <Dock className="w-8 h-8 text-primary/80 group-hover:text-primary transition-colors duration-300" />}
-                      {tech === "APIs" && <Globe className="w-8 h-8 text-primary/80 group-hover:text-primary transition-colors duration-300" />}
-                      {tech === "SQL" && <Database className="w-8 h-8 text-primary/80 group-hover:text-primary transition-colors duration-300" />}
-                      <span className="text-lg font-medium text-center group-hover:text-primary transition-colors duration-300">{tech}</span>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
+            <motion.div
+              whileHover={{
+                scale: 1.05,
+                color: "var(--color-primary)",
+                transition: { duration: 0.2 }
+              }}
+              className="group cursor-default"
+            >
+              <motion.span
+                className="text-2xl md:text-3xl font-medium block text-center transition-colors duration-300 group-hover:text-gradient"
+              >
+                {tech}
+              </motion.span>
+            </motion.div>
           </motion.div>
         ))}
       </motion.div>
