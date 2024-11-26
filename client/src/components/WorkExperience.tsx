@@ -7,19 +7,19 @@ const WORK_EXPERIENCE = [
     company: "Havas Media Group",
     role: "Lead Data Engineer",
     period: "May 2022 - Today",
-    description: "Building cloud infrastructure, monitoring systems, and data pipelines."
+    description: "Building cloud infrastructure, orchestrating data pipelines, and implementing comprehensive monitoring systems."
   },
   {
     company: "Telefónica",
     role: "Data Engineer",
     period: "Jun 2021 - May 2022",
-    description: "Data Engineer implementing ETL processes and distributed computing solutions using PySpark and Hadoop."
+    description: "Implementing ETL processes and optimizing distributed computing solutions for massive data processing."
   },
   {
     company: "Technical University of Madrid",
     role: "Full-Stack Developer",
     period: "Oct 2020 - Dec 2020",
-    description: "Full-Stack Developer creating blockchain solutions with HyperLedger Fabric."
+    description: "Developing smart contracts and implementing full-stack blockchain solutions."
   }
 ];
 
