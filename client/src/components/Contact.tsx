@@ -27,7 +27,7 @@ export function Contact() {
         <div className="flex justify-center gap-8">
           {[
             { text: "LinkedIn", href: SOCIAL_LINKS.LINKEDIN },
-            { text: "X", icon: <XLogo />, href: SOCIAL_LINKS.TWITTER }
+            { text: "", icon: <XLogo />, href: SOCIAL_LINKS.TWITTER }
           ].map((item, index) => (
             <motion.a
               key={index}
