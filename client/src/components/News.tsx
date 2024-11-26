@@ -5,48 +5,32 @@ import { ExternalLink } from "lucide-react";
 const NEWS_ITEMS = [
   {
     title: "Talent and technology at the service of the network",
-    date: "2024",
-    url: "https://www.etsit.upm.es/comunicacion/noticias/ano-2024/talento-y-tecnologia-al-servicio-de-la-red.html"
+    url: "https://web.archive.org/web/20230204033106/https://empresas.blogthinkbig.com/revolucion-red-analisis-datos-talento-tecnologia/",
   },
   {
     title: "AI Lab: The Global Talent Community for a Data Company",
-    date: "2024",
-    url: "https://careers.telefonica.com/programa/ai-lab-programa-de-talento-global-para-una-telco-tech"
+    url: "https://empresas.blogthinkbig.com/ai-lab/",
   },
   {
     title: "Young talents to exploit data from Telefónica networks",
-    date: "2023",
-    url: "https://www.etsit.upm.es/comunicacion/noticias/jovenes-talentos-para-explotar-los-datos-de-las-redes-de-telefonica.html"
+    url: "https://www.linkedin.com/pulse/j%C3%B3venes-talentos-para-explotar-los-datos-de-las-redes-parmegiani/",
   },
   {
-    title: "ESIT collaborates in a Telefónica program for young talents in Big Data",
-    date: "2023",
-    url: "https://www.etsit.upm.es/comunicacion/noticias/la-etsit-colabora-en-un-programa-de-telefonica-para-jovenes-talentos-en-big-data.html"
-  }
+    title:
+      "ESIT collaborates in a Telefónica program for young talents in Big Data",
+    url: "https://www.unir.net/actualidad/vida-academica/esit-colabora-en-un-programa-de-telefonica-para-jovenes-talentos-en-big-data/",
+  },
 ];
 
 export function News() {
   return (
-    <motion.section
-      variants={staggerContainer}
-      className="section"
-    >
-      <motion.h2
-        variants={fadeIn}
-        className="section-title"
-      >
+    <motion.section variants={staggerContainer} className="section">
+      <motion.h2 variants={fadeIn} className="section-title">
         News
       </motion.h2>
-      <motion.div
-        variants={staggerContainer}
-        className="space-y-4 max-w-4xl"
-      >
+      <motion.div variants={staggerContainer} className="space-y-4 max-w-4xl">
         {NEWS_ITEMS.map((news, index) => (
-          <motion.div
-            key={index}
-            variants={fadeIn}
-            className="flat-item"
-          >
+          <motion.div key={index} variants={fadeIn} className="flat-item">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
               <div className="space-y-2">
                 <motion.a
@@ -60,7 +44,6 @@ export function News() {
                     {news.title}
                   </h3>
                 </motion.a>
-                <p className="text-white/50">{news.date}</p>
               </div>
               <motion.a
                 href={news.url}
