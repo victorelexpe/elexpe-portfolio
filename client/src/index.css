@@ -74,7 +74,7 @@
   }
 
   .text-hero {
-    @apply text-6xl md:text-8xl font-extralight tracking-tighter;
+    @apply text-6xl md:text-8xl font-semibold tracking-tighter;
   }
 
   .text-subtitle {
