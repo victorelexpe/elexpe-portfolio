@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../lib/animations";
-import { ExternalLink, Github, Linkedin } from "lucide-react";
 import { SOCIAL_LINKS } from "../lib/constants";
 
 export function Contact() {
@@ -26,20 +25,19 @@ export function Contact() {
         </p>
         <div className="flex justify-center gap-8">
           {[
-            { icon: <Linkedin className="h-8 w-8" />, href: SOCIAL_LINKS.LINKEDIN },
-            { icon: <ExternalLink className="h-8 w-8" />, href: SOCIAL_LINKS.TWITTER },
-            { icon: <Github className="h-8 w-8" />, href: SOCIAL_LINKS.GITHUB }
+            { text: "LinkedIn", href: SOCIAL_LINKS.LINKEDIN },
+            { text: "X", href: SOCIAL_LINKS.TWITTER }
           ].map((item, index) => (
             <motion.a
               key={index}
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/50 hover:text-white transition-colors duration-300"
+              className="text-white/50 hover:text-white transition-colors duration-300 text-lg"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              {item.icon}
+              {item.text}
             </motion.a>
           ))}
         </div>
