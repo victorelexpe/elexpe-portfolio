@@ -21,7 +21,7 @@ export function Hero() {
           variants={fadeIn}
           className="text-subtitle text-center"
         >
-          Computer Engineer specializing in Data Engineering. In my free time, I enjoy sim racing and producing music with synthesizers.
+          Computer Engineer specializing in Data Engineering. I also do sim racing and produce music with synthesizers.
         </motion.p>
         <motion.div
           variants={fadeIn}
