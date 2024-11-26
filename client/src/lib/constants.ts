@@ -30,15 +30,38 @@ export const PROJECTS = [
 
 export const TECH_STACK = [
   {
-    category: "Frontend",
-    techs: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
+    category: "Cloud & Infrastructure",
+    techs: [
+      "Google Cloud Platform",
+      "Cloud Functions",
+      "Cloud Run",
+      "Storage",
+      "Monitoring",
+      "Workflows"
+    ]
   },
   {
-    category: "Backend",
-    techs: ["Node.js", "Express", "tRPC", "PostgreSQL", "MongoDB"]
+    category: "Data & Analytics",
+    techs: [
+      "BigQuery",
+      "Dataform",
+      "StreamSets",
+      "Hadoop",
+      "MongoDB",
+      "SQL"
+    ]
   },
   {
-    category: "Tools & Others",
-    techs: ["Git", "Docker", "AWS", "Vercel", "OpenAI API"]
+    category: "Languages & Tools",
+    techs: [
+      "Python",
+      "Flask",
+      "Javascript",
+      "NodeJS",
+      "Git",
+      "CI/CD",
+      "Docker",
+      "APIs"
+    ]
   }
 ];
