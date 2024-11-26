@@ -49,20 +49,6 @@ export function Hero() {
           ))}
         </motion.div>
       </div>
-      <motion.div
-        variants={fadeIn}
-        className="flex-1 flex justify-center"
-        whileHover={{ scale: 1.02 }}
-      >
-        <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full blur-2xl opacity-20" />
-          <img
-            src="/IMG_8072.jpeg"
-            alt="Victor Hasim Elexpe Ahamri"
-            className="relative w-72 h-72 rounded-full object-cover border-4 border-white/20 shadow-2xl"
-          />
-        </div>
-      </motion.div>
     </motion.section>
   );
 }
