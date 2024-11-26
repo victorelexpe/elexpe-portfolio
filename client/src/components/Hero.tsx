@@ -33,10 +33,13 @@ export function Hero() {
           >
             <Button
               size="lg"
-              className="bg-white text-black hover:bg-white/90 text-lg px-8"
+              className="bg-white text-black hover:bg-white/90 text-lg px-8 flex items-center gap-2"
               asChild
             >
-              <a href="#projects">View My Work</a>
+              <a href={SOCIAL_LINKS.TWITTER} target="_blank" rel="noopener noreferrer">
+                <Twitter className="h-5 w-5" />
+                <span>Follow me on X</span>
+              </a>
             </Button>
           </motion.div>
         </motion.div>
