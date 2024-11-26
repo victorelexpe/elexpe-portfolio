@@ -9,57 +9,63 @@ export function Projects() {
     <motion.section
       id="projects"
       variants={staggerContainer}
-      className="py-16"
+      className="py-20"
     >
       <motion.h2
         variants={fadeIn}
-        className="text-3xl font-bold mb-8"
+        className="text-4xl md:text-5xl font-bold mb-12 text-gradient"
       >
         Projects
       </motion.h2>
       <motion.div
         variants={staggerContainer}
-        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
       >
         {PROJECTS.map((project, index) => (
           <motion.div
             key={index}
             variants={fadeIn}
-            whileHover={{ y: -5 }}
+            whileHover={{ y: -8, scale: 1.02 }}
+            className="h-full"
           >
-            <Card>
+            <Card className="glass-card gradient-bg h-full border border-white/20 transition-all duration-300 hover:border-primary/50">
               <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
+                <CardTitle className="text-2xl font-bold">{project.title}</CardTitle>
+                <CardDescription className="text-lg">{project.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech) => (
-                    <span
+                    <motion.span
                       key={tech}
-                      className="px-2 py-1 text-sm bg-primary/10 rounded-md"
+                      whileHover={{ scale: 1.05 }}
+                      className="px-3 py-1.5 text-sm glass-card rounded-full border border-white/10"
                     >
                       {tech}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
                 <div className="flex gap-4">
-                  <a
+                  <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-primary"
+                    className="p-2 glass-card rounded-full hover:text-primary transition-colors duration-300"
                   >
                     <Github className="h-5 w-5" />
-                  </a>
-                  <a
+                  </motion.a>
+                  <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-primary"
+                    className="p-2 glass-card rounded-full hover:text-primary transition-colors duration-300"
                   >
                     <ExternalLink className="h-5 w-5" />
-                  </a>
+                  </motion.a>
                 </div>
               </CardContent>
             </Card>

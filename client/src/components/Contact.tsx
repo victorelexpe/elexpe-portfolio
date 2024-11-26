@@ -10,49 +10,55 @@ export function Contact() {
     <motion.section
       id="contact"
       variants={fadeIn}
-      className="py-16"
+      className="py-20"
     >
       <motion.h2
         variants={fadeIn}
-        className="text-3xl font-bold mb-8"
+        className="text-4xl md:text-5xl font-bold mb-12 text-gradient"
       >
         Get in Touch
       </motion.h2>
-      <Card>
-        <CardContent className="pt-6">
+      <motion.div
+        whileHover={{ scale: 1.02 }}
+        className="glass-card gradient-bg rounded-xl border border-white/20 transition-all duration-300 hover:border-primary/50"
+      >
+        <CardContent className="p-12">
           <motion.div
             variants={fadeIn}
-            className="flex flex-col items-center gap-6"
+            className="flex flex-col items-center gap-8"
           >
-            <p className="text-center text-lg text-muted-foreground max-w-2xl">
+            <p className="text-center text-xl md:text-2xl text-muted-foreground max-w-2xl">
               I'm always interested in new opportunities and collaborations.
               Feel free to reach out!
             </p>
-            <div className="flex gap-4">
-              <Button variant="outline" size="icon" asChild>
-                <a href={`mailto:contact@elexpe.dev`}>
-                  <Mail />
-                </a>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <a href={SOCIAL_LINKS.GITHUB} target="_blank" rel="noopener noreferrer">
-                  <Github />
-                </a>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <a href={SOCIAL_LINKS.LINKEDIN} target="_blank" rel="noopener noreferrer">
-                  <Linkedin />
-                </a>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <a href={SOCIAL_LINKS.TWITTER} target="_blank" rel="noopener noreferrer">
-                  <Twitter />
-                </a>
-              </Button>
+            <div className="flex gap-6">
+              {[
+                { icon: <Mail className="h-6 w-6" />, href: `mailto:contact@elexpe.dev` },
+                { icon: <Github className="h-6 w-6" />, href: SOCIAL_LINKS.GITHUB },
+                { icon: <Linkedin className="h-6 w-6" />, href: SOCIAL_LINKS.LINKEDIN },
+                { icon: <Twitter className="h-6 w-6" />, href: SOCIAL_LINKS.TWITTER }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="w-12 h-12 glass-card hover:border-primary/50 transition-colors duration-300"
+                    asChild
+                  >
+                    <a href={item.href} target="_blank" rel="noopener noreferrer">
+                      {item.icon}
+                    </a>
+                  </Button>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </CardContent>
-      </Card>
+      </motion.div>
     </motion.section>
   );
 }

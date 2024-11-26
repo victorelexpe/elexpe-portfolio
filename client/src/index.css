@@ -10,11 +10,15 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
+    --card-gradient: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(59, 130, 246, 0.1));
+    --card-gradient-hover: linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(59, 130, 246, 0.2));
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
+    --card-gradient: linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(59, 130, 246, 0.2));
+    --card-gradient-hover: linear-gradient(135deg, rgba(147, 51, 234, 0.3), rgba(59, 130, 246, 0.3));
   }
 }
 
@@ -24,6 +28,24 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-background text-foreground tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-background/60 backdrop-blur-lg border border-white/10 shadow-lg;
+  }
+
+  .gradient-bg {
+    background: var(--card-gradient);
+  }
+
+  .gradient-bg:hover {
+    background: var(--card-gradient-hover);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500;
   }
 }

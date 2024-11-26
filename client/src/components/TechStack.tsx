@@ -7,11 +7,11 @@ export function TechStack() {
     <motion.section
       id="tech"
       variants={staggerContainer}
-      className="py-16"
+      className="py-20"
     >
       <motion.h2
         variants={fadeIn}
-        className="text-3xl font-bold mb-8"
+        className="text-4xl md:text-5xl font-bold mb-12 text-gradient"
       >
         Tech Stack
       </motion.h2>
@@ -23,15 +23,17 @@ export function TechStack() {
           <motion.div
             key={category.category}
             variants={fadeIn}
-            className="space-y-4"
+            whileHover={{ scale: 1.02 }}
+            className="glass-card gradient-bg p-6 rounded-xl border border-white/20 transition-all duration-300 hover:border-primary/50"
           >
-            <h3 className="text-xl font-semibold">{category.category}</h3>
-            <div className="grid grid-cols-2 gap-2">
+            <h3 className="text-2xl font-bold mb-6">{category.category}</h3>
+            <div className="grid grid-cols-2 gap-3">
               {category.techs.map((tech) => (
                 <motion.div
                   key={tech}
                   whileHover={{ scale: 1.05 }}
-                  className="p-2 bg-primary/5 rounded-md text-center"
+                  whileTap={{ scale: 0.95 }}
+                  className="p-3 glass-card rounded-lg text-center border border-white/10 hover:border-primary/30 transition-all duration-300"
                 >
                   {tech}
                 </motion.div>
