@@ -55,6 +55,14 @@
   }
 
   .list-item {
-    @apply py-6 border-t border-white/10 first:pt-0 first:border-t-0;
+    @apply py-6 pl-4 border-t border-white/10 first:pt-0 first:border-t-0;
+  }
+
+  .list-item-content {
+    @apply flex items-start gap-8;
+  }
+
+  .list-item-icon {
+    @apply flex-shrink-0 w-6 text-white/50;
   }
 }

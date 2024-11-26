@@ -43,8 +43,10 @@ export function News() {
             variants={fadeIn}
             className="list-item"
           >
-            <div className="flex items-start gap-6">
-              <Newspaper className="h-6 w-6 text-white/50 mt-1" />
+            <div className="list-item-content">
+              <div className="list-item-icon">
+                <Newspaper className="h-6 w-6" />
+              </div>
               <div className="space-y-2 flex-1">
                 <h3 className="text-2xl font-light">{news.title}</h3>
                 <p className="text-white/50">{news.date}</p>

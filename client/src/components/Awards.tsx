@@ -37,8 +37,10 @@ export function Awards() {
             variants={fadeIn}
             className="list-item"
           >
-            <div className="flex items-start gap-6">
-              <Trophy className="h-6 w-6 text-white/50 mt-1" />
+            <div className="list-item-content">
+              <div className="list-item-icon">
+                <Trophy className="h-6 w-6" />
+              </div>
               <div className="space-y-2">
                 <h3 className="text-2xl font-light">{award.title}</h3>
                 <p className="text-white/70">
