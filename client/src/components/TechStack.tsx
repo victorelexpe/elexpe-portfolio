@@ -7,41 +7,38 @@ export function TechStack() {
     <motion.section
       id="tech"
       variants={staggerContainer}
-      className="py-20"
+      className="section"
     >
       <motion.h2
         variants={fadeIn}
-        className="text-4xl md:text-5xl font-bold mb-16 text-gradient"
+        className="section-title"
       >
         Tech Stack
       </motion.h2>
       <motion.div
         variants={staggerContainer}
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-12 gap-y-8"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16"
       >
-        {TECH_STACK.flatMap(category => category.techs).map((tech, index) => (
+        {TECH_STACK.map((category, index) => (
           <motion.div
-            key={tech}
+            key={index}
             variants={fadeIn}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.1 }}
+            className="space-y-6"
           >
-            <motion.div
-              whileHover={{
-                scale: 1.05,
-                color: "var(--color-primary)",
-                transition: { duration: 0.2 }
-              }}
-              className="group cursor-default"
-            >
-              <motion.span
-                className="text-2xl md:text-3xl font-medium block text-center transition-colors duration-300 group-hover:text-gradient"
-              >
-                {tech}
-              </motion.span>
-            </motion.div>
+            <h3 className="text-3xl font-light tracking-tight">{category.category}</h3>
+            <div className="space-y-4">
+              {category.techs.map((tech) => (
+                <motion.div
+                  key={tech}
+                  className="group"
+                  whileHover={{ x: 8 }}
+                >
+                  <span className="font-mono text-lg text-white/50 group-hover:text-white transition-colors duration-300">
+                    {tech}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         ))}
       </motion.div>
