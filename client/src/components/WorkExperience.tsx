@@ -37,7 +37,7 @@ export function WorkExperience() {
       </motion.h2>
       <motion.div
         variants={staggerContainer}
-        className="relative max-w-3xl mx-auto"
+        className="relative max-w-3xl"
       >
         {WORK_EXPERIENCE.map((work, index) => (
           <motion.div

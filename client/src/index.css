@@ -47,7 +47,7 @@
   }
 
   .timeline-item {
-    @apply relative pl-8 pb-8 border-l border-white/10 last:border-l-0 last:pb-0;
+    @apply relative pl-8 pb-8 border-l border-white/10 last:border-l-0 last:pb-0 ml-4;
   }
 
   .timeline-dot {
