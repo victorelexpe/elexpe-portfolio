@@ -6,25 +6,18 @@ export const SOCIAL_LINKS = {
 
 export const PROJECTS = [
   {
-    title: "Replit Clone",
-    description: "A code editor built with React and Monaco Editor, featuring real-time collaboration and execution capabilities.",
-    tech: ["React", "TypeScript", "Monaco Editor", "Socket.io", "Node.js"],
-    link: "https://replit-clone.elexpe.dev",
-    github: "https://github.com/ElexpreWasTaken/replit-clone"
+    title: "data101.dev",
+    description: "A comprehensive data engineering learning platform featuring interactive tutorials and hands-on exercises for modern data technologies.",
+    tech: ["Python", "Flask", "BigQuery", "MongoDB", "APIs"],
+    link: "https://data101.dev",
+    github: "https://github.com/ElexpreWasTaken/data101"
   },
   {
-    title: "AI Code Reviewer",
-    description: "An AI-powered code review tool that provides suggestions and improvements for your code.",
-    tech: ["Next.js", "OpenAI API", "TypeScript", "Tailwind CSS"],
-    link: "https://code-reviewer.elexpe.dev",
-    github: "https://github.com/ElexpreWasTaken/ai-code-reviewer"
-  },
-  {
-    title: "Personal Website",
-    description: "My personal website built with React and Tailwind CSS, featuring smooth animations and dark mode.",
-    tech: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    link: "https://elexpe.dev",
-    github: "https://github.com/ElexpreWasTaken/portfolio"
+    title: "BQ Schema Sync",
+    description: "An open-source tool for automating BigQuery schema synchronization across environments, streamlining data warehouse management.",
+    tech: ["Python", "BigQuery", "Cloud Functions", "CI/CD", "APIs"],
+    link: "https://github.com/ElexpreWasTaken/bq-schema-sync",
+    github: "https://github.com/ElexpreWasTaken/bq-schema-sync"
   }
 ];
 
