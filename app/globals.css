@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-black text-white;
+    @apply bg-white text-gray-900;
   }
 }
 
@@ -39,5 +39,14 @@
 
   .container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .bento-card {
+    @apply bg-white/80 rounded-3xl p-6 backdrop-blur-xl 
+    shadow-[0_8px_30px_rgb(0,0,0,0.04)] 
+    border border-white/20
+    transition-all duration-300 
+    hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]
+    hover:border-white/40;
   }
 }

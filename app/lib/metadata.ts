@@ -5,7 +5,6 @@ export const siteMetadata = {
   siteName: "Victor Elexpe",
   twitterHandle: "@victorelexpe",
   locale: "en-US",
-  type: "website",
   keywords: [
     "Victor Elexpe",
     "Data Engineer",

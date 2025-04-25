@@ -1,17 +1,20 @@
 import './globals.css'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Inter, Poppins } from 'next/font/google'
 import { Metadata } from 'next';
 import { siteMetadata } from './lib/metadata';
 import { PersonStructuredData } from '@/components/StructuredData';
+import { Nav } from '@/components/Nav';
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter',
 })
 
-const playfair = Playfair_Display({ 
+const poppins = Poppins({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  variable: '--font-poppins',
+  weight: ['400', '500', '600', '700', '800', '900'],
 })
 
 export const metadata: Metadata = {
@@ -21,23 +24,11 @@ export const metadata: Metadata = {
     template: `%s | ${siteMetadata.siteName}`,
   },
   description: siteMetadata.description,
-  keywords: [
-    'Victor Elexpe',
-    'Data Engineering',
-    'Computer Engineer',
-    'Madrid',
-    'Spain',
-    'Sim Racing',
-    'Music Producer',
-    'Spanish Engineer',
-    'Data Engineer Madrid',
-    'Tech Professional Spain',
-    ...siteMetadata.keywords
-  ],
+  keywords: siteMetadata.keywords,
   authors: [{ name: siteMetadata.siteName }],
   creator: siteMetadata.siteName,
   openGraph: {
-    type: 'website',
+    type: "website",
     locale: siteMetadata.locale,
     url: siteMetadata.siteUrl,
     title: siteMetadata.title,
@@ -48,7 +39,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Victor Elexpe - Data Engineer & Music Producer'
+        alt: `${siteMetadata.title} - Open Graph Image`
       }
     ]
   },
@@ -98,11 +89,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`scroll-smooth ${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`scroll-smooth ${inter.variable} ${poppins.variable}`}>
       <head>
         <PersonStructuredData />
       </head>
-      <body className="bg-black text-white antialiased font-sans">{children}</body>
+      <body className="bg-black text-gray-200 antialiased font-sans pt-16">
+        <Nav />
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

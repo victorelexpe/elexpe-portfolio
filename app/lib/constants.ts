@@ -2,7 +2,8 @@ export const SOCIAL_LINKS = {
   GITHUB: "https://github.com/victorelexpe",
   LINKEDIN: "https://linkedin.com/in/victorelexpe",
   TWITTER: "https://twitter.com/victorelexpe",
-  SPOTIFY: "https://open.spotify.com/intl-es/artist/3tbBV517Zagfk4lMMpyjp7?si=E5tMWO5ITzWc6bwzthQHvg"
+  SPOTIFY: "https://open.spotify.com/intl-es/artist/3tbBV517Zagfk4lMMpyjp7?si=E5tMWO5ITzWc6bwzthQHvg",
+  EMAIL: "mailto:projects@elexpe.dev"
 };
 
 export const PROJECTS = [
@@ -26,15 +27,22 @@ export const TECH_STACK = [
     category: "Cloud & Infrastructure",
     techs: [
       "Google Cloud Platform",
-      "Cloud Functions",
+      "Cloud Run",
       "IAM",
       "Workflows",
       "Asset Inventory",
       "Vertex AI",
+      "Firebase",
       "Workload Identity Federation",
+      "Vercel",
       "Digital Ocean",
       "Docker",
-      "VMs"
+      "Kubernetes",
+      "Terraform",
+      "Prometheus",
+      "Grafana",
+      "ELK Stack",
+      "VMs",
     ]
   },
   {
@@ -71,6 +79,10 @@ export const TECH_STACK = [
   {
     category: "Tools & Frameworks",
     techs: [
+      "Next.js",
+      "Tailwind CSS",
+      "Animation Libraries (GSAP, Framer Motion)",
+      "Lucide React",
       "Git",
       "APIs",
       "OpenAI",
@@ -85,7 +97,9 @@ export const TECH_STACK = [
       "FiwareIDM",
       "HyperLedger Fabric",
       "DO-178C",
-      "Agile methodologies"
+      "Agile methodologies",
+      "WebSockets",
+      "CI/CD"
     ]
   }
 ];
