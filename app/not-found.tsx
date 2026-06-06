@@ -1,17 +1,17 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-4">
-      <h2 className="mb-4 text-4xl font-bold">404</h2>
-      <p className="mb-8 text-xl">Page not found</p>
-      <Link 
+    <main className="mx-auto flex min-h-[calc(100vh-5rem)] max-w-xl flex-col justify-center px-6 py-16">
+      <h1 className="text-xl font-normal text-stone-900">404</h1>
+      <p className="mt-2 text-stone-600">Page not found.</p>
+      <Link
         href="/"
-        className="rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        className="mt-8 text-stone-800 underline decoration-stone-300 underline-offset-4 transition-colors hover:text-stone-600 hover:decoration-stone-500 focus:outline-none focus-visible:decoration-stone-600"
         aria-label="Return to homepage"
       >
-        Return Home
+        Return home
       </Link>
-    </div>
+    </main>
   );
 }

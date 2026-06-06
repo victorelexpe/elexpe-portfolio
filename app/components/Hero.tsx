@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn } from "@/lib/animations";
@@ -15,7 +17,7 @@ type SocialLink = {
 
 const SOCIAL_LINKS_CONFIG: SocialLink[] = [
   { href: "mailto:projects@elexpe.dev", label: "Email", icon: null },
-  { href: SOCIAL_LINKS.TWITTER, label: "Twitter", icon: null },
+  { href: SOCIAL_LINKS.TWITTER, label: "Twitter / X", icon: null },
   { href: SOCIAL_LINKS.LINKEDIN, label: "LinkedIn", icon: null },
   { href: SOCIAL_LINKS.SPOTIFY, label: "Spotify", icon: null },
 ];
@@ -154,7 +156,7 @@ export const Hero = () => {
                 ref={taglineRef} 
                 className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-gray-400 mt-1 md:mt-2 opacity-0"
               >
-                Data Engineer & AI Founder
+                Cloud Architect
               </Text>
             </Text>
             
@@ -162,8 +164,8 @@ export const Hero = () => {
               ref={descRef} 
               className="mt-6 md:mt-8 space-y-3 text-lg md:text-xl text-gray-300 leading-relaxed md:leading-loose max-w-2xl"
             >
-              <Text>Founder of Almanzor Cloud, building AI platforms for modern businesses. Based in Madrid, Spain.</Text>
-              <Text>Passionate about data, cloud infrastructure, sim racing, and music production.</Text>
+              <Text>Cloud Architect and Founder of Almanzor Cloud, where I design and build AI-powered platforms that help modern businesses scale and innovate. Based in Madrid, Spain.</Text>
+              <Text>When I'm not architecting cloud solutions, you'll find me exploring the latest in data engineering, pushing the limits in sim racing, or creating music.</Text>
             </div>
           </div>
 

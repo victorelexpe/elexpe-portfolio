@@ -10,23 +10,54 @@ export function PersonStructuredData() {
           '@context': 'https://schema.org',
           '@type': 'Person',
           name: 'Victor Elexpe',
-          jobTitle: 'Computer Engineer',
-          description: 'Data Engineer based in Madrid, Spain. Sim racing enthusiast and music producer.',
+          jobTitle: 'Cloud Architect',
+          description: 'Cloud Architect and Founder of Almanzor Cloud. Expert in cloud-native solutions, enterprise data platforms, and AI platforms. Based in Madrid, Spain.',
           url: siteMetadata.siteUrl,
+          email: 'projects@elexpe.dev',
           sameAs: [
             SOCIAL_LINKS.TWITTER,
             SOCIAL_LINKS.LINKEDIN,
-            SOCIAL_LINKS.SPOTIFY
+            SOCIAL_LINKS.SPOTIFY,
+            SOCIAL_LINKS.GITHUB
           ],
           knowsAbout: [
+            'Cloud Architecture',
+            'Cloud & Data Architecture',
             'Data Engineering',
             'Computer Engineering',
-            'Sim Racing',
-            'Music Production'
+            'AI Platforms',
+            'Enterprise Data Platforms',
+            'Cloud-Native Solutions',
+            'Digital Transformation',
+            'Google Cloud Platform',
+            'Kubernetes',
+            'Docker',
+            'Terraform',
+            'BigQuery',
+            'Data Pipelines',
+            'ETL',
+            'Machine Learning'
           ],
-          location: {
-            '@type': 'Place',
-            name: 'Madrid, Spain'
+          alumniOf: {
+            '@type': 'EducationalOrganization',
+            name: 'Technical University of Madrid'
+          },
+          worksFor: [
+            {
+              '@type': 'Organization',
+              name: 'Seguros Ocaso',
+              jobTitle: 'Cloud & Data Architect'
+            },
+            {
+              '@type': 'Organization',
+              name: 'Almanzor Cloud',
+              jobTitle: 'Founder'
+            }
+          ],
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Madrid',
+            addressCountry: 'ES'
           }
         })
       }}

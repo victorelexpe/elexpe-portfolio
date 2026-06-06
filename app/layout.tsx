@@ -1,21 +1,15 @@
-import './globals.css'
-import { Inter, Poppins } from 'next/font/google'
-import { Metadata } from 'next';
-import { siteMetadata } from './lib/metadata';
-import { PersonStructuredData } from '@/components/StructuredData';
-import { Nav } from '@/components/Nav';
-import { Analytics } from "@vercel/analytics/react"
+import "./globals.css";
+import { Inter } from "next/font/google";
+import { Metadata } from "next";
+import { siteMetadata } from "./lib/metadata";
+import { PersonStructuredData } from "@/components/StructuredData";
+import { Nav } from "@/components/Nav";
+import { Analytics } from "@vercel/analytics/react";
 
-const inter = Inter({ 
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  variable: '--font-poppins',
-  weight: ['400', '500', '600', '700', '800', '900'],
-})
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -25,10 +19,18 @@ export const metadata: Metadata = {
   },
   description: siteMetadata.description,
   keywords: siteMetadata.keywords,
-  authors: [{ name: siteMetadata.siteName }],
+  authors: [
+    {
+      name: siteMetadata.siteName,
+      url: siteMetadata.siteUrl,
+    },
+  ],
   creator: siteMetadata.siteName,
+  publisher: siteMetadata.siteName,
+  category: "Technology",
+  classification: "Portfolio",
   openGraph: {
-    type: "website",
+    type: "profile",
     locale: siteMetadata.locale,
     url: siteMetadata.siteUrl,
     title: siteMetadata.title,
@@ -36,18 +38,21 @@ export const metadata: Metadata = {
     siteName: siteMetadata.siteName,
     images: [
       {
-        url: '/og-image.jpg',
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: `${siteMetadata.title} - Open Graph Image`
-      }
-    ]
+        alt: `${siteMetadata.siteName} - Cloud Architect`,
+        type: "image/jpeg",
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: siteMetadata.title,
     description: siteMetadata.description,
     creator: siteMetadata.twitterHandle,
+    site: siteMetadata.twitterHandle,
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -55,9 +60,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   alternates: {
@@ -66,20 +71,31 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/favicon.ico',
-        sizes: 'any',
+        url: "/favicon.ico",
+        sizes: "any",
       },
       {
-        url: '/icon-192x192.png',
-        sizes: '192x192',
-        type: 'image/png',
+        url: "/icon-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
       },
       {
-        url: '/icon-512x512.png',
-        sizes: '512x512',
-        type: 'image/png',
+        url: "/icon-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
       },
     ],
+    apple: [
+      {
+        url: "/icon-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+    ],
+  },
+  manifest: "/manifest.json",
+  other: {
+    "theme-color": "#faf8f5",
   },
 };
 
@@ -89,11 +105,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`scroll-smooth ${inter.variable} ${poppins.variable}`}>
+    <html lang="en" className={`scroll-smooth ${inter.variable}`}>
       <head>
         <PersonStructuredData />
       </head>
-      <body className="bg-black text-gray-200 antialiased font-sans pt-16">
+      <body className="bg-beige text-stone-800 antialiased font-sans">
         <Nav />
         {children}
         <Analytics />

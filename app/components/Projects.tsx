@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { fadeIn } from "../lib/animations";
 import { PROJECTS } from "../lib/constants";

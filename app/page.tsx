@@ -1,72 +1,23 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { fadeIn } from "@/lib/animations";
-import { Hero } from "@/components/Hero";
-import { ErrorBoundary } from "@/components/ErrorBoundary";
-
-// Direct imports instead of dynamic
-import { Projects } from "@/components/Projects"; 
-import { WorkExperience } from "@/components/WorkExperience";
-import { News } from "@/components/News";
-import { Awards } from "@/components/Awards";
-import TechStack from "@/components/TechStack"; // Default export
-import { Contact } from "@/components/Contact"; // Import Contact component
-
-// Import GSAP and ScrollTrigger
-import { useLayoutEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-// Register ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
+import Link from "next/link";
+import { SITE_LINKS } from "@/lib/constants";
 
 export default function Page() {
-
-  // Optional: Add a general fade-in for the whole main content area 
-  // if desired, though individual section animations might be sufficient.
-  useLayoutEffect(() => {
-    // Fade in main content *after* Hero is potentially animated
-    gsap.to('main', { opacity: 1, duration: 0.5, delay: 0.5 }); // Increased delay slightly
-    return () => {
-      ScrollTrigger.killAll(); // Kill triggers on unmount
-    }
-  }, []);
-
   return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      variants={fadeIn}
-      className=""
-    >
-      {/* Hero moved outside the main container to allow full width */}
-      <ErrorBoundary>
-        <Hero />
-      </ErrorBoundary>
+    <main className="mx-auto flex min-h-[calc(100vh-5rem)] max-w-xl flex-col justify-center px-6 py-16">
+      <h1 className="text-2xl font-normal text-stone-900">Victor Elexpe</h1>
+      <p className="mt-2 text-stone-600">Cloud Architect</p>
 
-      {/* Main content container remains constrained */}
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 opacity-0 space-y-20 sm:space-y-24">
-        <ErrorBoundary>
-          {/* Removed Hero from here */}
-          
-          {/* Layout Grids and Sections */}
-          <Projects />
-          <WorkExperience />
-          <News />
-          <Awards />
-          <TechStack />
-          {/* Contact removed from here */}
-        </ErrorBoundary>
-      </main>
-
-      {/* Contact Section (Full Width) - Moved outside main */}
-      <ErrorBoundary>
-        {/* No extra margin needed here as Contact has internal padding */}
-        <Contact />
-      </ErrorBoundary>
-
-    </motion.div>
+      <nav aria-label="Site sections" className="mt-12 flex flex-col gap-2">
+        {SITE_LINKS.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="text-stone-800 underline decoration-stone-300 underline-offset-4 transition-colors hover:text-stone-600 hover:decoration-stone-500 focus:outline-none focus-visible:decoration-stone-600"
+          >
+            {link.label}
+          </Link>
+        ))}
+      </nav>
+    </main>
   );
 }

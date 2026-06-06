@@ -1,3 +1,5 @@
+"use client";
+
 import { Text } from "./Text";
 import { cn } from "@/lib/utils";
 

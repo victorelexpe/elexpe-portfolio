@@ -1,20 +1,17 @@
 export const siteMetadata = {
-  title: "Victor Elexpe - Computer Engineer & Data Engineer",
-  description: "Computer Engineer specialized in Data Engineering based in Madrid, Spain. Experienced in cloud infrastructure, data pipelines, and full-stack development.",
+  title: "Victor Elexpe",
+  description:
+    "Cloud Architect and Founder of Almanzor Cloud. Based in Madrid, Spain.",
   siteUrl: "https://elexpe.dev",
   siteName: "Victor Elexpe",
   twitterHandle: "@victorelexpe",
   locale: "en-US",
   keywords: [
     "Victor Elexpe",
+    "Cloud Architect",
     "Data Engineer",
-    "Computer Engineer",
+    "Almanzor Cloud",
     "Madrid",
     "Spain",
-    "Cloud Infrastructure",
-    "Data Engineering",
-    "Full Stack Developer",
-    "ETL",
-    "Data Pipelines"
-  ]
-}; 
+  ],
+};

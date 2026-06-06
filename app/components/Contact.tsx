@@ -1,3 +1,5 @@
+"use client";
+
 import { Text } from "./Text";
 import { cn } from "@/lib/utils";
 import { SOCIAL_LINKS } from "@/lib/constants";
@@ -12,7 +14,7 @@ import gsap from 'gsap';
 const CONTACT_LINKS = [
   { href: SOCIAL_LINKS.EMAIL, label: "Email" },
   { href: SOCIAL_LINKS.LINKEDIN, label: "LinkedIn" },
-  { href: SOCIAL_LINKS.TWITTER, label: "Twitter" },
+  { href: SOCIAL_LINKS.TWITTER, label: "Twitter / X" },
   // Add other relevant contact links if needed (e.g., GitHub)
 ];
 
