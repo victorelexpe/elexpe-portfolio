@@ -52,6 +52,9 @@ export const metadata: Metadata = {
     },
   },
   alternates: { types: alternateTypes },
+  verification: {
+    other: { "msvalidate.01": "B423AEE2067862675ABBAC62DCFE5FD6" },
+  },
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
