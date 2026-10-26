@@ -2,8 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-beige text-stone-800;
+/* Scale the whole site up on large monitors so it doesn't float in the middle. */
+@media (min-width: 1920px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
+body {
+  @apply bg-paper text-ink;
+  margin: 0;
+}
+
+::selection {
+  @apply bg-accent/20 text-ink;
+}
+
+:focus-visible {
+  @apply outline-none ring-2 ring-accent ring-offset-2;
+  --tw-ring-offset-color: theme("colors.paper");
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track-dot,
+  .motion-particle {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .group:hover .track-outline {
+    stroke-dasharray: 1;
+    animation: track-draw 1.4s ease-out;
+  }
+
+  @keyframes track-draw {
+    from {
+      stroke-dashoffset: 1;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  main > * {
+    animation: rise 0.5s ease-out both;
+  }
+
+  main > *:nth-child(2) {
+    animation-delay: 0.06s;
+  }
+
+  main > *:nth-child(3) {
+    animation-delay: 0.12s;
+  }
+
+  main > *:nth-child(n + 4) {
+    animation-delay: 0.18s;
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
   }
 }

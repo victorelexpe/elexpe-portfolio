@@ -1,14 +1,30 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
-import { Metadata } from "next";
-import { siteMetadata } from "./lib/metadata";
-import { PersonStructuredData } from "@/components/StructuredData";
+import { IBM_Plex_Mono, IBM_Plex_Sans, Newsreader } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { alternateTypes, siteMetadata } from "./lib/metadata";
 import { Nav } from "@/components/Nav";
+import { SiteStructuredData } from "@/components/StructuredData";
 import { Analytics } from "@vercel/analytics/react";
 
-const inter = Inter({
+const newsreader = Newsreader({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500"],
+  variable: "--font-newsreader",
+  display: "swap",
+});
+
+const plexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-plex-sans",
+  display: "swap",
+});
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["300", "400"],
+  variable: "--font-plex-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -18,42 +34,12 @@ export const metadata: Metadata = {
     template: `%s | ${siteMetadata.siteName}`,
   },
   description: siteMetadata.description,
+  applicationName: siteMetadata.siteName,
   keywords: siteMetadata.keywords,
-  authors: [
-    {
-      name: siteMetadata.siteName,
-      url: siteMetadata.siteUrl,
-    },
-  ],
-  creator: siteMetadata.siteName,
-  publisher: siteMetadata.siteName,
+  authors: [{ name: siteMetadata.author, url: siteMetadata.siteUrl }],
+  creator: siteMetadata.author,
+  publisher: siteMetadata.author,
   category: "Technology",
-  classification: "Portfolio",
-  openGraph: {
-    type: "profile",
-    locale: siteMetadata.locale,
-    url: siteMetadata.siteUrl,
-    title: siteMetadata.title,
-    description: siteMetadata.description,
-    siteName: siteMetadata.siteName,
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: `${siteMetadata.siteName} - Cloud Architect`,
-        type: "image/jpeg",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteMetadata.title,
-    description: siteMetadata.description,
-    creator: siteMetadata.twitterHandle,
-    site: siteMetadata.twitterHandle,
-    images: ["/og-image.jpg"],
-  },
   robots: {
     index: true,
     follow: true,
@@ -65,38 +51,14 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: siteMetadata.siteUrl,
-  },
+  alternates: { types: alternateTypes },
   icons: {
-    icon: [
-      {
-        url: "/favicon.ico",
-        sizes: "any",
-      },
-      {
-        url: "/icon-192x192.png",
-        sizes: "192x192",
-        type: "image/png",
-      },
-      {
-        url: "/icon-512x512.png",
-        sizes: "512x512",
-        type: "image/png",
-      },
-    ],
-    apple: [
-      {
-        url: "/icon-192x192.png",
-        sizes: "192x192",
-        type: "image/png",
-      },
-    ],
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
-  manifest: "/manifest.json",
-  other: {
-    "theme-color": "#faf8f5",
-  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#eef4f5",
 };
 
 export default function RootLayout({
@@ -105,11 +67,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`scroll-smooth ${inter.variable}`}>
+    <html lang="en" className={`${newsreader.variable} ${plexSans.variable} ${plexMono.variable}`}>
       <head>
-        <PersonStructuredData />
+        <SiteStructuredData />
       </head>
-      <body className="bg-beige text-stone-800 antialiased font-sans">
+      <body>
         <Nav />
         {children}
         <Analytics />

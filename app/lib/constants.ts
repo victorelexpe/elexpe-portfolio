@@ -1,31 +1,32 @@
+import type { TrackId } from "./trackPaths";
+
 export const SOCIAL_LINKS = {
   GITHUB: "https://github.com/victorelexpe",
   LINKEDIN: "https://linkedin.com/in/victorelexpe",
-  TWITTER: "https://twitter.com/victorelexpe",
+  TWITTER: "https://x.com/elexpeDev",
   SPOTIFY: "https://open.spotify.com/intl-es/artist/3tbBV517Zagfk4lMMpyjp7?si=E5tMWO5ITzWc6bwzthQHvg",
   EMAIL: "mailto:projects@elexpe.dev",
 };
 
-export const SITE_LINKS = [
-  { href: "/about", label: "About" },
-  { href: "/work", label: "Work" },
-  { href: "/notes", label: "Notes" },
-];
+export const HOME_INTRO =
+  "I build data, cloud, and AI systems designed to still make sense once the hype fades.";
 
 export const WORK_EXPERIENCE = [
   {
     company: "Almanzor Cloud",
-    role: "Founder",
+    role: "Founder & AI Platform Architect",
     url: "https://almanzor.cloud/",
+    current: true,
   },
   {
     company: "Seguros Ocaso",
-    role: "Cloud & Data Architect",
+    role: "AI Platform Architect",
     url: "https://www.ocaso.es/",
+    current: true,
   },
   {
     company: "Havas Media Group",
-    role: "Lead Data Engineer",
+    role: "Platform Architect",
     url: "https://havasmedia.com/",
   },
   {
@@ -40,9 +41,87 @@ export const WORK_EXPERIENCE = [
   },
 ];
 
+export const NAV_LINKS = [
+  { href: "/what-i-do", label: "What I do" },
+  { href: "/experience", label: "Experience" },
+  { href: "/notes", label: "Notes" },
+  { href: "/sim-racing", label: "Sim racing" },
+];
+
+export const SERVICES = [
+  {
+    title: "Data platforms",
+    description:
+      "Pipelines, models, and governance that teams can trust today and still understand a year from now.",
+  },
+  {
+    title: "Cloud architecture",
+    description:
+      "Infrastructure on Google Cloud that is boring in the best way: observable, cost-aware, and easy to change.",
+  },
+  {
+    title: "AI in production",
+    description:
+      "Taking AI from a promising demo to something people rely on every day, with evaluation, guardrails, and a clear owner.",
+  },
+];
+
+export const SECTORS = [
+  { sector: "Telecom", company: "Telefónica" },
+  { sector: "Media & advertising", company: "Havas" },
+  { sector: "Insurance", company: "Ocaso" },
+  { sector: "Academia", company: "UPM" },
+];
+
+export const EDUCATION = [
+  {
+    institution: "UNED",
+    degree: "BA in Philosophy",
+    url: "https://www.uned.es/",
+    inProgress: true,
+  },
+  {
+    institution: "Technical University of Madrid",
+    degree: "BSc in Computer Engineering",
+    url: "https://www.upm.es/",
+  },
+  {
+    institution: "Tallinn University of Technology",
+    degree: "Erasmus exchange · Computer Engineering",
+    url: "https://taltech.ee/en",
+  },
+];
+
+export const SIM_RACING = {
+  platforms: ["Assetto Corsa Competizione", "iRacing"],
+  car: "McLaren 720S GT3 Evo",
+  rig: "Logitech G920",
+  // Estimated laps apply the Nürburgring 24h gap (8:20 vs ~8:05 fast GT3, +3.1%)
+  // to fast GT3 reference times. Replace with real laps and drop `estimated`.
+  laps: [
+    { track: "Spa-Francorchamps", outline: "spa", country: "BE", lengthKm: 7.004, time: "2:20.7", estimated: true },
+    { track: "Silverstone", outline: "silverstone", country: "GB", lengthKm: 5.891, time: "2:01.1", estimated: true },
+    { track: "Barcelona-Catalunya", outline: "barcelona", country: "ES", lengthKm: 4.657, time: "1:45.7", estimated: true },
+    { track: "Mount Panorama", outline: "bathurst", country: "AU", lengthKm: 6.213, time: "2:03.7", estimated: true },
+    { track: "Suzuka", outline: "suzuka", country: "JP", lengthKm: 5.807, time: "2:02.2", estimated: true },
+    { track: "Nürburgring 24h", outline: "nurburgring24h", country: "DE", lengthKm: 25.378, time: "8:20" },
+  ] as SimLap[],
+};
+
+export type SimLap = {
+  track: string;
+  outline: TrackId;
+  country: string;
+  lengthKm: number;
+  time: string | null;
+  estimated?: boolean;
+  game?: "ACC" | "iRacing";
+};
+
 export const NOTES = [
   {
     slug: "the-hidden-politics-of-convenience",
+    date: "2026-10-18",
     title: "The hidden politics of convenience",
     description:
       "Convenience often arrives as a neutral improvement, but it quietly changes who has agency and who becomes optimized.",
@@ -57,6 +136,7 @@ export const NOTES = [
   },
   {
     slug: "when-speed-becomes-culture",
+    date: "2026-10-05",
     title: "When speed becomes culture",
     description:
       "Faster output does not only change productivity. It changes expectations, pressure, and the meaning of good work.",
@@ -71,6 +151,7 @@ export const NOTES = [
   },
   {
     slug: "trust-after-infinite-content",
+    date: "2026-09-21",
     title: "Trust after infinite content",
     description:
       "When content becomes cheap, trust becomes the scarce material.",
@@ -85,6 +166,7 @@ export const NOTES = [
   },
   {
     slug: "the-right-to-remain-human-scale",
+    date: "2026-09-08",
     title: "The right to remain human-scale",
     description:
       "Some parts of life should resist acceleration because their value depends on time, ambiguity, and presence.",
@@ -99,6 +181,7 @@ export const NOTES = [
   },
   {
     slug: "who-gets-the-leverage",
+    date: "2026-08-24",
     title: "Who gets the leverage",
     description:
       "AI impact depends on ownership, incentives, and power, not only capability.",
@@ -113,6 +196,7 @@ export const NOTES = [
   },
   {
     slug: "the-age-of-plausible-answers",
+    date: "2026-08-11",
     title: "The age of plausible answers",
     description:
       "Plausibility can replace understanding if people stop checking the difference.",
@@ -127,6 +211,7 @@ export const NOTES = [
   },
   {
     slug: "attention-as-public-infrastructure",
+    date: "2026-07-27",
     title: "Attention as public infrastructure",
     description:
       "Attention is not just a personal productivity problem. It is shaped by the systems we live inside.",
@@ -141,6 +226,7 @@ export const NOTES = [
   },
   {
     slug: "software-maintenance-as-ethics",
+    date: "2026-07-13",
     title: "Software maintenance as ethics",
     description:
       "Maintainable systems are a form of care toward future users and future engineers.",
@@ -155,6 +241,7 @@ export const NOTES = [
   },
   {
     slug: "boring-interfaces-serious-systems",
+    date: "2026-06-25",
     title: "Boring interfaces, serious systems",
     description:
       "Predictable contracts matter more than clever abstractions in systems people depend on.",
@@ -169,6 +256,7 @@ export const NOTES = [
   },
   {
     slug: "the-things-we-choose-not-to-automate",
+    date: "2026-06-09",
     title: "The things we choose not to automate",
     description:
       "Refusal, restraint, and taste may become important technical and cultural skills.",
@@ -183,14 +271,19 @@ export const NOTES = [
   },
 ];
 
+export const CONTACT_PITCH =
+  "Building a data, cloud, or AI platform and need a second pair of hands? Tell me about it.";
+
+export const CONTACT_EMAIL_HREF = `${SOCIAL_LINKS.EMAIL}?subject=${encodeURIComponent("Project inquiry")}`;
+
 export const CONTACT_LINKS = [
-  { href: SOCIAL_LINKS.EMAIL, label: "Email" },
-  { href: SOCIAL_LINKS.LINKEDIN, label: "LinkedIn" },
-  { href: SOCIAL_LINKS.TWITTER, label: "Twitter / X" },
-  { href: SOCIAL_LINKS.SPOTIFY, label: "Spotify" },
-];
+  { href: CONTACT_EMAIL_HREF, label: "Email", detail: "Project inquiries", icon: "email" },
+  { href: SOCIAL_LINKS.LINKEDIN, label: "LinkedIn", detail: "in/victorelexpe", icon: "linkedin" },
+  { href: SOCIAL_LINKS.TWITTER, label: "X", detail: "@elexpeDev", icon: "x" },
+] as const;
 
 export const ABOUT_BIO = [
-  "Cloud Architect and Founder of Almanzor Cloud, where I design and build AI-powered platforms that help modern businesses scale and innovate. Based in Madrid, Spain.",
-  "When I'm not architecting cloud solutions, you'll find me exploring the latest in data engineering, pushing the limits in sim racing, or creating music.",
+  "I work where data platforms, cloud infrastructure, and AI meet — mostly on the part that has to keep working long after the launch.",
+  "Most of my time goes to data engineering. I also make music, and occasionally drive a sim rig.",
+  "I'm also studying Philosophy at UNED, which is where most of my writing comes from: how these systems shape the people who end up using them.",
 ];
